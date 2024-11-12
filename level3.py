@@ -40,15 +40,16 @@ def system_to_decimal(num):
     return x
 
 while True:
-    choice=input("What do you want to do? 1 for decimal to any system or 2 for system to decimal ")
-    if choice=="1":
-        number = input("Enter your decimal number\nat the end write x and number for which system you want to convert it ").lower()
-        print(f'Converted number: {decimal_to_any_system(number)}')
-    elif choice=="2":
-        number=input("Enter your number\nat the end write x and number in which system it is ").lower()
-        print(f'Converted number: {system_to_decimal(number)}')
+    choice=input("Write number and in the end x and it's system(example 1000x2) ")
+    choice=system_to_decimal(choice)
+    x=''
+    system=input("In which system you want to convert?(write x and number) ").lower()
+    if system=="x1":
+        print(f"Converted number: {choice}")
     else:
-        print("Uncorrect choice.")
+        x=str(choice)+system
+        x=decimal_to_any_system(x)
+        print(f"Converted number: {x}")
     while True:
         choice = input("Do you wanna to enter another number? (yes, no) ").lower()
         if choice == "yes":
