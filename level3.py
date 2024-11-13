@@ -1,9 +1,9 @@
 def decimal_to_any_system(num):
     if 'x' not in num:
-        return "Input should be in format '<decimal_number>x<base>'"
+        return "Input should be in format '<number>x<base>'"
     num=num.split('x')
     if len(num) != 2 or not num[0].isdigit() or not num[1].isdigit():
-        return "Input should be in format '<decimal_number>x<base>'"
+        return "Input should be in format '<number>x<base>'"
     user_num=int(num[0])
     n=int(num[1])
     if n<2 or n>16:
@@ -22,7 +22,7 @@ def system_to_decimal(num):
         return "Input should be in format '<number>x<base>'"
     num = num.split('x')
     if len(num) != 2 or not num[1].isdigit():
-        return "Input should be in format '<decimal_number>x<base>'"
+        return "Input should be in format '<number>x<base>'"
     user_num = num[0]
     n = int(num[1])
     x = 0
